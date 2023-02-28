@@ -14,7 +14,7 @@ function List({ todos, setTodos }) {
     const onEditHandler = (todoId) => {
         const newTodos = todos.map((todo) => {
             if (todo.id === todoId) {
-                return {
+                return {                                    // key값을 받아 isDone의 상태를 바꾼다.
                     ...todo,
                     isDone: !todo.isDone,
                 };
@@ -35,7 +35,7 @@ function List({ todos, setTodos }) {
                     return (
                         <Todo
                         todo={todo}
-                        key={todo.id}
+                        key={todo.id}                       // key값과 value는 세트다.
                         setTodos={setTodos}
                         onDeleteHandler={onDeleteHandler}
                         onEditHandler={onEditHandler}

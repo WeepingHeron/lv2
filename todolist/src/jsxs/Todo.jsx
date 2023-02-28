@@ -11,7 +11,7 @@ function Todo({ todo, onDeleteHandler, onEditHandler }) {
             <div className='button-set'>
                 <button
                 className='todo-delete-button button'
-                onClick={() => onDeleteHandler(todo.id)}
+                onClick={() => onDeleteHandler(todo.id)}        // 화살표 함수의 ()는 페이지가 렌더링 시 자동으로 onDeleteHandler가 실행되는 것을 방지한다.
                 >
                     삭제하기
                 </button>
@@ -22,7 +22,7 @@ function Todo({ todo, onDeleteHandler, onEditHandler }) {
                     {todo.isDone ? '취소' : '완료'}
                 </button>
             </div>
-        </div>
+        </div>                                                  // 삼항연산자를 통해 isDone의 값에 따라 취소와 완료를 바꿔준다.
     );
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Form from './Form.jsx';
 import Header from './Header.jsx';
-import Layout from './Layout.jsx';
+import Layout from './Layout.jsx';                          // TodoList에서 Form, Header, Layout, List를 모아 APP으로 한 번에 전달한다.
 import List from './List.jsx';
 
 const TodoList = () => {
