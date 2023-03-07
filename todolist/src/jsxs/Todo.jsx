@@ -1,10 +1,19 @@
 import React from 'react';
 import './csss/todo.css';
+import {useNavigate} from 'react-router-dom';
+
+
 
 function Todo({ todo, onDeleteHandler, onEditHandler }) {
+    const navigate = useNavigate();
     return (
-        <div className='todo-container'>
+        <div className='todo-container'>            
             <div>
+                <button
+            className='todo-detail-button'
+            onClick={() => {navigate('/Detail.jsx')}}
+            >상세보기
+            </button>
                 <h2 className='todo-title'>{todo.title}</h2>
                 <div>{todo.body}</div>
             </div>

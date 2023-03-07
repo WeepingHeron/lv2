@@ -1,0 +1,12 @@
+.detail {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.detail-back-button{
+    color: #fff;
+    border-radius: 12px;
+    align-items: center;
+    display: flex;
+}
