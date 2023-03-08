@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import styled from "styled-components";
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate, useParams} from 'react-router-dom';
-import {getTodoById} from '../redux/modules/todos.js'
+import {getTodoById} from '../redux/modules/todos.js';
 
 const Detail = () => {
     const dispatch = useDispatch();

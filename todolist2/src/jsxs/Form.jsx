@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import nextId from 'react-id-generator';
 import {useDispatch} from 'react-redux';
@@ -13,6 +13,7 @@ const Form = () => {
         body: '',
         isDone: false,
     });
+
     const onChangeHandler = (event) => {
         const {name, value} = event.target;
         setTodo({...todo, [name]: value});
