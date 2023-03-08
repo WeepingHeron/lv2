@@ -11,7 +11,7 @@ const Detail = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        dispatch(getTodoByID(id));
+        dispatch(getTodoById(id));
     }, [dispatch, id]);
 
     return (

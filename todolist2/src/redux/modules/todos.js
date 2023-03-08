@@ -1,29 +1,7 @@
-const ADD_TODO = {ADD_TODO};
-const DELETE_TODO = {DELETE_TODO};
-const TOGGLE_STATUS_TODO = {TOGGLE_STATUS_TODO};
-const GET_TODO_BY_ID = {GET_TODO_BY_ID};
-
-const initialState = {
-    todos: [{
-        id: 1,
-        title: '리액트 공부하기',
-        body: '리액트 기초를 공부해봅시다.',
-        isDone: false
-    },
-    {
-        id: 2,
-        title: '리액트 공부하기',
-        body: '리액트 기초를 공부해봅시다.',
-        isDone: true
-    }],
-
-    todo: {
-        id: 0,
-        title: '',
-        body: '',
-        isDone: false
-    }
-  };
+const ADD_TODO = "ADD_TODO";
+const DELETE_TODO = "DELETE_TODO";
+const TOGGLE_STATUS_TODO = "TOGGLE_STATUS_TODO";
+const GET_TODO_BY_ID = "GET_TODO_BY_ID";
 
 export const addTodo = (payload) => {
     return {
@@ -52,6 +30,28 @@ export const getTodoById = (payload) => {
         payload
     };
 };
+
+const initialState = {
+    todos: [{
+        id: 1,
+        title: '리액트 공부하기',
+        body: '리액트 기초를 공부해봅시다.',
+        isDone: false
+    },
+    {
+        id: 2,
+        title: '리액트 공부하기',
+        body: '리액트 기초를 공부해봅시다.',
+        isDone: true
+    }],
+
+    todo: {
+        id: 0,
+        title: '',
+        body: '',
+        isDone: false
+    }
+  };
 
 const todos = (state = initialState, action) => {
     switch (action.type) {
